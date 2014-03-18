@@ -22,4 +22,19 @@ assetic:
 sass_bin_path: /usr/local/bin/sass
 compass_bin_path: /usr/local/bin/compass
 
+## in html.php file
+
+    <?php $view['slots']->output('base_css','') ?>
+<?php  foreach($view['assetic']->stylesheets(
+   array('@AppPlayerBundle/Resources/public/assets/scss/file1.scss',           
+           '@AppPlayerBundle/Resources/public/assets/scss/file2.scss'),
+        array('cssrewrite'), array('output' => 'css/main.css', 'package' => 'assetic')) as $url): ?>
+        <link rel="stylesheet" href="<?php echo $url ?>" />
+    <?php endforeach; ?>
+   
+## Do assets:install & assetic:dump   
+php app/console assets:install
+php app/console assetic:dump
+
+
           
