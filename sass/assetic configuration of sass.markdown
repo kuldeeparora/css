@@ -20,6 +20,19 @@ if you only install compass then it also include sass installation
 
 sass_bin_path: /usr/local/bin/sass
 compass_bin_path: /usr/local/bin/compass
+
+# Compass sprite configuration
+
+    assetic.filter.compass.no_line_comments: true
+    assetic.filter.compass.debug: %kernel.debug%
+    assetic.filter.compass.http_images_path: /bundles/appplayer/assets/img
+    assetic.filter.compass.images_path: %kernel.root_dir%/../src/App/PlayerBundle/Resources/public/assets/img
+    assetic.filter.compass.images_dir: %kernel.root_dir%/../src/App/PlayerBundle/Resources/public/assets/img
+
+    assetic.filter.compass.http_generated_images_path: /bundles/appplayer/assets/commonSprites
+    assetic.filter.compass.generated_images_path: %kernel.root_dir%/../src/App/PlayerBundle/Resources/public/assets/commonSprites
+
+
 </pre>          
 
 <b> in html.php file </b>
