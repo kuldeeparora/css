@@ -76,3 +76,29 @@ footer {
     background-color: lightgreen;
     font-size: 30px;
 }
+
+.container4 {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 
+        [left-sidebar-start] 20%
+        [main-content-start] 60%
+        [right-sidebar-start] 20%;
+    grid-rows:
+        [body-start] 80%
+        [footer-start] 20%;
+    grid-gap: 15px;
+}
+
+.container4 > * {
+    background-color: palegoldenrod;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container4 .footer {
+    grid-column: main-content-start/ span 2;
+}
